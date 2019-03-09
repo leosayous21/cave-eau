@@ -1,0 +1,14 @@
+[Unit]
+Description=Cave service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/node app.js
+WorkingDirectory=/home/pi/cave
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
